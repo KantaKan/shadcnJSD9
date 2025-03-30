@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../components/ui/button";
 import { useTheme } from "next-themes";
+import { toast } from "sonner";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();

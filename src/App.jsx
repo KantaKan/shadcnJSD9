@@ -7,6 +7,7 @@ import { Button } from "./components/ui/button.js";
 import { useTheme } from "next-themes";
 import Navbar from "./component/Navbar.jsx";
 import { LoginForm } from "./component/LoginForm.jsx";
+import { Toaster, toast } from "sonner";
 
 function App() {
   const { theme, setTheme } = useTheme();
@@ -16,6 +17,7 @@ function App() {
       <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
         <div className="w-full max-w-sm">
           <LoginForm />
+          <Toaster />
         </div>
       </div>
     </div>

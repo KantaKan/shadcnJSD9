@@ -2,12 +2,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
+import { toast } from "sonner";
 export function LoginForm() {
   return (
     <div>
       <Card>
         <CardHeader>
-          <CardTitle className="text-1xl">Login</CardTitle>
+          <CardTitle className="text-2xl">Generation FullStack</CardTitle>
           <CardDescription>Enter your email and password</CardDescription>
         </CardHeader>
         <CardContent>
@@ -21,7 +22,14 @@ export function LoginForm() {
                 <Label>Password</Label>
                 <Input type="password" id="password"></Input>
               </div>
-              <Button type="submit" className="w-full" onClick={(e) => e.preventDefault()}>
+              <Button
+                type="submit"
+                className="w-full"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toast("Logged in");
+                }}
+              >
                 Login
               </Button>
               <div className="mt-4 text-center text-sm">

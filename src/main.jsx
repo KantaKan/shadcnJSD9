@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { ThemeProvider } from "next-themes";
 import DarkMode from "./component/ThemeProvider.js";
+import { Toaster } from "sonner";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
