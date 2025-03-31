@@ -8,18 +8,15 @@ import { useTheme } from "next-themes";
 import Navbar from "./component/Navbar.jsx";
 import { LoginForm } from "./component/LoginForm.jsx";
 import { Toaster, toast } from "sonner";
+import LoginPage from "./Pages/login-page.jsx";
 
 function App() {
   const { theme, setTheme } = useTheme();
   return (
-    <div>
+    <div className="">
       <Navbar />
-      <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
-        <div className="w-full max-w-sm">
-          <LoginForm />
-          <Toaster />
-        </div>
-      </div>
+      <LoginPage />
+      <Toaster />
     </div>
   );
 }
