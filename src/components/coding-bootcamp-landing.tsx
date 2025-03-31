@@ -1,5 +1,4 @@
-import {Link }from "react-router";
-import Image from "next/image";
+import { Link } from "react-router";
 import { CheckCircle, Code, Users, Zap, ChevronRight, Star, Calendar, Trophy, ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -11,15 +10,6 @@ import { Badge } from "@/components/ui/badge";
 export default function CodingBootcampLanding() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 w-full border-b bg-background">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex gap-2 items-center text-xl font-bold">
-            <Code className="h-6 w-6" />
-            <span>CodeCraft Academy</span>
-          </div>
-          <Button>Apply Now</Button>
-        </div>
-      </header>
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-background to-muted">
@@ -41,16 +31,22 @@ export default function CodingBootcampLanding() {
                 </div>
                 <div className="flex items-center space-x-4 text-sm">
                   <div className="flex -space-x-2">
-                    <Image src="/placeholder.svg?height=40&width=40" width={40} height={40} alt="Avatar" className="rounded-full border-2 border-background" />
-                    <Image src="/placeholder.svg?height=40&width=40" width={40} height={40} alt="Avatar" className="rounded-full border-2 border-background" />
-                    <Image src="/placeholder.svg?height=40&width=40" width={40} height={40} alt="Avatar" className="rounded-full border-2 border-background" />
+                    <img src="https://randomuser.me/api/portraits/women/17.jpg" width={40} height={40} alt="Graduate" className="rounded-full border-2 border-background object-cover" />
+                    <img src="https://randomuser.me/api/portraits/men/4.jpg" width={40} height={40} alt="Graduate" className="rounded-full border-2 border-background object-cover" />
+                    <img src="https://randomuser.me/api/portraits/women/3.jpg" width={40} height={40} alt="Graduate" className="rounded-full border-2 border-background object-cover" />
                   </div>
                   <div className="text-muted-foreground">
                     Join <span className="font-medium text-foreground">2,500+</span> graduates working at top tech companies
                   </div>
                 </div>
               </div>
-              <Image src="/placeholder.svg?height=550&width=550" width={550} height={550} alt="Coding Bootcamp" className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:aspect-square" />
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                width={550}
+                height={550}
+                alt="Students collaborating on code"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:aspect-square"
+              />
             </div>
           </div>
         </section>
@@ -274,7 +270,7 @@ export default function CodingBootcampLanding() {
               <Card className="bg-muted/50">
                 <CardHeader>
                   <div className="flex items-center gap-4">
-                    <Image src="/placeholder.svg?height=60&width=60" width={60} height={60} alt="Student" className="rounded-full" />
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" width={60} height={60} alt="Sarah Johnson" className="rounded-full object-cover" />
                     <div>
                       <CardTitle className="text-lg">Sarah Johnson</CardTitle>
                       <CardDescription>Software Engineer at Google</CardDescription>
@@ -295,7 +291,7 @@ export default function CodingBootcampLanding() {
               <Card className="bg-muted/50">
                 <CardHeader>
                   <div className="flex items-center gap-4">
-                    <Image src="/placeholder.svg?height=60&width=60" width={60} height={60} alt="Student" className="rounded-full" />
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" width={60} height={60} alt="Michael Chen" className="rounded-full object-cover" />
                     <div>
                       <CardTitle className="text-lg">Michael Chen</CardTitle>
                       <CardDescription>Frontend Developer at Spotify</CardDescription>
@@ -316,7 +312,7 @@ export default function CodingBootcampLanding() {
               <Card className="bg-muted/50">
                 <CardHeader>
                   <div className="flex items-center gap-4">
-                    <Image src="/placeholder.svg?height=60&width=60" width={60} height={60} alt="Student" className="rounded-full" />
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" width={60} height={60} alt="Jessica Patel" className="rounded-full object-cover" />
                     <div>
                       <CardTitle className="text-lg">Jessica Patel</CardTitle>
                       <CardDescription>Full-Stack Developer at Shopify</CardDescription>
@@ -516,13 +512,13 @@ export default function CodingBootcampLanding() {
             <div className="flex flex-col gap-2">
               <h3 className="text-sm font-medium">Programs</h3>
               <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   Full-Stack
                 </Link>
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   Front-End
                 </Link>
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   Back-End
                 </Link>
               </nav>
@@ -530,13 +526,13 @@ export default function CodingBootcampLanding() {
             <div className="flex flex-col gap-2">
               <h3 className="text-sm font-medium">Company</h3>
               <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   About
                 </Link>
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   Blog
                 </Link>
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   Careers
                 </Link>
               </nav>
@@ -544,13 +540,13 @@ export default function CodingBootcampLanding() {
             <div className="flex flex-col gap-2">
               <h3 className="text-sm font-medium">Legal</h3>
               <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   Privacy
                 </Link>
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   Terms
                 </Link>
-                <Link href="#" className="hover:underline">
+                <Link to="#" className="hover:underline">
                   Cookies
                 </Link>
               </nav>

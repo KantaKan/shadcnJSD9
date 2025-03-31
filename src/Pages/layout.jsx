@@ -5,9 +5,9 @@ import { Toaster } from "sonner";
 
 function Layout({ children }) {
   return (
-    <div className="h-screen overflow-hidden flex flex-col">
+    <div className="h-screen w-screen flex flex-col">
       <Navbar />
-      <div className="flex flex-1">
+      <div className="flex flex-1 items-center justify-center">
         {children}
         <Outlet />
       </div>
